@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <title>Weather App</title>
+    <style>
+      .header{
+        text-align: center; 
+        margin-top: 5%;
+            }
+      .main-content{
+         text-align: center;
+         margin-top: 5%;
+                    }
+       .footer { 
+          position: absolute; 
+          bottom: 0; 
+          left: 0; 
+          z-index: 10;
+                }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1> Weather App </h1>
+    </header>
+    <div class="main-content">
+        <form action="/action.php" id="weatherForm">
+            <label for="lat">Latitude:</label>
+            <input name="lat" id="lat" type="text" autocomplete="off" required>
+            <label for="long">Longitude:</label>
+            <input name="long" id="long" type="text" autocomplete="off" required>
+            <button type="submit">Send</button>
+        </form>
+        <div class="result">
+            <p id="weather-result"></p>
+        </div>
+    </div>
+    <footer class="footer">
+        <section id='contact-info'>
+            <p> Contact the Author:</p>
+            <p>Email:<a href="mailto: mujtaba.rana97@gmmail.com">mujtaba.rana97@gmail.com</a></p>
+        </section>
+        <script src="weatherApi.js"></script>
+    </footer>
+</body>
