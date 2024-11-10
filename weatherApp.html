@@ -22,6 +22,13 @@
           left: 0; 
           z-index: 10;
                 }
+        .result{
+            text-align: center;
+            margin-top: 5%;
+        }
+        #dataDiv {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -34,9 +41,12 @@
             <input name="lat" id="lat" type="text" autocomplete="off" required>
             <label for="long">Longitude:</label>
             <input name="long" id="long" type="text" autocomplete="off" required>
+            <label for="api-key">ApiKey:</label>
+            <input name="api-key" id="api-key" type="text" autocomplete="off" required>
             <button type="submit">Send</button>
         </form>
-        <div class="result">
+        <div class="result" id="dataDiv">
+            <h3>Weather Data:</h3>
             <p id="weather-result"></p>
         </div>
     </div>
